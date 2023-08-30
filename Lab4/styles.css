@@ -1,0 +1,69 @@
+body{
+    width: 71.8%;
+}
+p{
+    font-family: fantasy;
+}
+
+input {
+    width: 90%;
+    background-color: white;
+}
+
+input:hover{
+    background-color: blue;
+}
+
+textarea {
+    resize: horizontal;
+    width: 90%;
+}
+
+textarea:hover{
+    background-color: blue;
+}
+
+.longBox{
+    width: 300px;
+    height: 970px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+    font-size: 16px;
+    float: left;
+    border: 0px;
+}
+.longBox:hover{
+    box-shadow: inset -25px -48px 10px rebeccapurple
+}
+.shortBox{
+    width: 700px;
+    height: 310px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: left;
+    font-size: 16px;
+    float: right;
+    border: 0px;
+}
+
+.shortBox:hover{
+    box-shadow: inset -25px -48px 10px rebeccapurple
+}
+
+.blue{
+    background-color: cyan;
+}
+.pink{
+    background-color: pink;
+}
+.lightblue{
+    background-color: lightblue;
+}
+.grey{
+    background-color: gray;
+}
+div.button{
+    width: 200px;
+    float: left;
+}

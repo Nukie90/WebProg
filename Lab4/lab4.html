@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV page</title>
+    <link rel="stylesheet" href="lab4.css">
+    <script src="http://161.246.5.61/Lab.js"></script>
+</head>
+
+
+<body>
+    <div class="main">
+        <div class="left">
+            <div class="img khaki">
+                <img src="https://b.fssta.com/uploads/application/soccer/headshots/53004.vresize.350.350.medium.20.png" alt="Vinius">
+                <hr>
+                <label for="profile"><strong>Profile:</strong></label>
+                <p><textarea name="profile" id="profile" rows="3"></textarea></p>
+            </div>
+            <div class="address lime">
+                <p><label for="street"><strong>Address:</strong></label></p>
+                <hr>
+                <p><input type="text" id="street" name="street" placeholder="Maple Street"></p>
+                <p><input type="text" id="city" name="city" placeholder="California"></p>
+                <p>
+                    <label for="country">Country:</label><br>
+                    <select name="country" id="country">
+                        <option value="">Select a country</option>
+                        <script>
+                            populateCountries("country");
+                        </script>
+                    </select>
+                </p>
+            </div>
+            <div class="contact pink">
+                <p>Contacts</p>
+                <hr>
+                <p>Reference</p>
+                <p><textarea name="ref" id="ref" rows="3"></textarea></p>
+                <p><label for="favColour"><strong>Favorite Colour:</strong></p>
+                <p><input type="color" id="favColour"></p>
+            </div>
+        </div>
+        <div class="right">
+            <div class="info lime">
+                <p>Personal Information</p>
+                <hr>
+                <p>Name</p>
+                <p><input type="text" id="name" name="name" placeholder="John Doe"></p>
+                <p>Age</p>
+                <p><input type="range" id="age" name="age" min="0" max="100" onchange="updateAgeValue()">
+                    <span id="ageValue">0</span>
+                    <script>
+                        updateAgeValue();
+                    </script>
+                </p>
+                <p><label for="email"><strong>Email:</strong></label></p>
+                <p><input type="email" id="email" name="email" placeholder="myEmail@gmail.com"></p>
+                <p><label for="email"><strong>Phone:</strong></label></p>
+                <p><input type="text" id="phone" name="phone" placeholder="091-009-1770"></p>
+            </div>
+            <div class="edu pink">
+                <p>Education</p>
+                <hr>
+                <p><label for="university">University:</label></p>
+                <p><input type="text" id="university" name="university" placeholder="KMITL"></p>
+                <p><label for="degree"><strong>Degree:</strong></label></p>
+                <p><input type="text" id="degree" name="degree" placeholder="Software Engineering"></p>
+                <p><label for="graduationYear"><strong>Year of Graduation:</strong></label></p>
+                <p><input type="date" id="graduationYear"></p>
+            </div>
+            <div class="skill khaki">
+                <p>Skills & Experience</p>
+                <hr>
+                <p><label for="skills">Skills:</label></p>
+                <p><textarea name="skills" id="skills" rows="3"></textarea></p>
+                <p><label for="experience"><strong>Experience:</strong></label></p>
+                <p><textarea name="experience" id="experience" rows="3"></textarea></p>
+            </div>
+        </div>
+    </div>
+    <div align="center">
+        <input type="submit" value="Submit" class="button" onclick="displayResume()">
+    </div>
+</body>
+
+</html>

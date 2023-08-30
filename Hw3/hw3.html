@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transcript</title>
+    <style>
+        body {
+            font-size: 10pt;
+        }
+
+        strong {
+            font-family: 'Times New Roman';
+            height: 21.5pt;
+        }
+
+        #cnum {
+            width: 60px;
+            height: 9.5px;
+        }
+
+        #cname {
+            width: 300px;
+            height: 9.5px;
+        }
+
+        #credit {
+            width: 20px;
+            height: 9.5px;
+        }
+
+        #grade {
+            width: 20px;
+            height: 9.5px;
+        }
+
+        #gpa {
+            width: 30px;
+            height: 9.5px;
+        }
+
+        #total {
+            width: 20px;
+            height: 9.5px;
+        }
+
+        #fname {
+            width: 170px;
+        }
+
+        #admission {
+            width: 30px;
+        }
+
+        #degree {
+            width: 150px;
+        }
+    </style>
+</head>
+
+<body>
+    <form>
+        <table width="1000" border="0" align="center" cellpadding="0" cellspacing="0">
+            <tbody>
+                <tr>
+                    <td colspan="14" align="center">
+                        <h2>(Unofficial) Transcript</h2>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="9"></td>
+                    <td colspan="5" rowspan="3" align="right">
+                        <img src="https://www.postergully.com/cdn/shop/products/20d8d5f9caf1ece4be14045498eccdc1.jpeg?v=1578642233"
+                            width="100" height="100" alt="Photo">
+                    </td>
+                </tr>
+                <tr>
+
+                </tr>
+                <tr>
+                    <td colspan="14" align="center" style="font-size: 13pt;">School of Engineering</td>
+                </tr>
+                <tr align="left">
+                    <td colspan="14">
+                        <label for="fname"><i><strong>Name </i></strong></label>
+                        <input type="text" id="fname" name="fname" required placeholder="Mr/Miss Nxxxx Xxxxxxx">
+                    </td>
+                </tr>
+                <tr align="left">
+                    <label for="birth">
+                        <td colspan="7"><i><strong>Date of Birth </i></strong>
+                    </label>
+                    <input type="date" id="birth" name="birth">
+                    </td>
+                    <label for="student">
+                        <td colspan="7"><i><strong>Student ID </i></strong>
+                    </label>
+                    <input type="text" id="student" name="student" pattern="65\d*" required placeholder="65xxxxxx"
+                        maxlength="8">
+                    </td>
+                </tr>
+                <tr align="left">
+                    <label for="admission">
+                        <td colspan="7"><i><strong>Date of Admission </i></strong>
+                    </label>
+                    <input type="text" id="admission" name="admission" pattern="20\d*" placeholder="20xx" maxlength="4">
+                    </td>
+                    <td colspan="7"><i><strong>Date of Admission </i></strong>N/A</td>
+                </tr>
+                <tr align="left">
+                    <label for="degree">
+                        <td colspan="7"><i><strong>Degree </i></strong>
+                    </label>
+                    <input type="text" id="degree" name="degree" required placeholder="Bachelor of Engineering ">
+                    </td>
+                    <td colspan="7"></td>
+                </tr>
+                <tr align="left">
+                    <label for="major">
+                        <td colspan="7"><i><strong>Major </i></strong>
+                    </label>
+                    <input type="text" id="major" name="major" required placeholder="Software Engineering">
+                    </td>
+                    <td colspan="7"></td>
+                </tr>
+            </tbody>
+        </table>
+        <table border="1" width="1000" align="center" cellpadding="2" cellspacing="0">
+            <tr>
+                <td width="400" colspan="5" align="center">
+                    <strong>COURSE TITLE</strong>
+                </td>
+                <td width="50" align="center" style="font-size: 8pt;"><strong>CREDIT</strong></td>
+                <td width="50" align="center" style="font-size: 8pt;"><strong>GRADE</strong></td>
+                <td width="400" colspan="5" align="center">
+                    <strong>COURSE TITLE</strong>
+                </td>
+                <td width="50" align="center"><strong>CREDIT</strong></td>
+                <td width="50" align="center"><strong>GRADE</strong></td>
+            </tr>
+            <tr>
+                <!-- Title -->
+                <td width="400" colspan="5" align="center">
+                    <u><strong>Transfer Credit</strong></u>
+                    <br>
+                    <input type="text" name="cnum" id="cnum" placeholder="13006208" required maxlength="8">
+                    <input type="text" name="cname" id="cname" placeholder="Academic English 1">
+                    <br>
+                    <input type="text" name="cnum" id="cnum" placeholder="13006209" required maxlength="8">
+                    <input type="text" name="cname" id="cname" placeholder="Academic English 1">
+                    <br>
+                    <strong><i>GPA :</i></strong>
+                    <input type="text" name="gpa" id="gpa" pattern="[0-4\.\d]" required maxlength="4"
+                        placeholder="X.XX">
+                    <br>
+                    <u><strong>1st Semester,Year,2021-2022</strong></u>
+                    <br>
+                    <input type="text" name="cnum" id="cnum" placeholder="13006007" required maxlength="8">
+                    <input type="text" name="cname" id="cname" placeholder="Calculus 1">
+                    <br>
+                    <input type="text" name="cnum" id="cnum" placeholder="13006107" required maxlength="8">
+                    <input type="text" name="cname" id="cname" placeholder="Introduction to Computers and Programming">
+                    <br>
+                    <input type="text" name="cnum" id="cnum" placeholder="13006108" required maxlength="8">
+                    <input type="text" name="cname" id="cname" placeholder="Basic Electricity and Electronic">
+                    <br>
+                    <input type="text" name="cnum" id="cnum" placeholder="13006301" required maxlength="8">
+                    <input type="text" name="cname" id="cname" placeholder="Introduction to Logic">
+                    <br>
+                    <input type="text" name="cnum" id="cnum" placeholder="13016235" required maxlength="8">
+                    <input type="text" name="cname" id="cname" placeholder="C Programming">
+                    <br>
+                    <input type="text" name="cnum" id="cnum" placeholder="13016236" required maxlength="8">
+                    <input type="text" name="cname" id="cname" placeholder="C Programming Laboratory">
+                    <br>
+                    <strong><i>GPS :</i></strong>
+                    <input type="text" name="gpa" id="gpa" pattern="[0-4\.\d]" required maxlength="4"
+                        placeholder="X.XX">
+                    <strong><i>GPA :</i></strong>
+                    <input type="text" name="gpa" id="gpa" pattern="[0-4\.\d]" required maxlength="4"
+                        placeholder="X.XX">
+                    <br>
+                    <u><strong>2st Semester,Year,2021-2022</strong></u>
+                    <br>
+                    <input type="text" name="cnum" id="cnum" placeholder="13006008" required maxlength="8">
+                    <input type="text" name="cname" id="cname" placeholder="Calculus 2">
+                    <br>
+                    <input type="text" name="cnum" id="cnum" placeholder="13006303" required maxlength="8">
+                    <input type="text" name="cname" id="cname" placeholder="Cultural Studies">
+                    <br>
+                    <input type="text" name="cnum" id="cnum" placeholder="13006105" required maxlength="8">
+                    <input type="text" name="cname" id="cname" placeholder="Discrete Mathematics">
+                    <br>
+                    <input type="text" name="cnum" id="cnum" placeholder="13016204" required maxlength="8">
+                    <input type="text" name="cname" id="cname" placeholder="Digital Circuit and Logic Design">
+                    <br>
+                    <input type="text" name="cnum" id="cnum" placeholder="13016205" required maxlength="8">
+                    <input type="text" name="cname" id="cname" placeholder="Digital Circuit Labortory">
+                    <br>
+                    <input type="text" name="cnum" id="cnum" placeholder="13016209" required maxlength="8">
+                    <input type="text" name="cname" id="cname" placeholder="Object-Oriented Concept and Programming">
+                    <br>
+                    <input type="text" name="cnum" id="cnum" placeholder="13016210" required maxlength="8">
+                    <input type="text" name="cname" id="cname" placeholder="Object-Oriented Programming Laboratory">
+                    <br>
+                    <strong><i>GPS :</i></strong>
+                    <input type="text" name="gpa" id="gpa" pattern="[0-4\.\d]" required maxlength="4"
+                        placeholder="X.XX">
+                    <strong><i>GPA :</i></strong>
+                    <input type="text" name="gpa" id="gpa" pattern="[0-4\.\d]" required maxlength="4"
+                        placeholder="X.XX">
+                    <br>
+                    <u><strong>1st Semester,Year,2023-2024</strong></u>
+                    <br>
+                    <input type="text" name="cnum" id="cnum" placeholder="13006006" required maxlength="8">
+                    <input type="text" name="cname" id="cname" placeholder="Linear Algebra">
+                    <br>
+                    <input type="text" name="cnum" id="cnum" placeholder="13006210" required maxlength="8">
+                    <input type="text" name="cname" id="cname" placeholder="Technical Writing">
+                    <br>
+                    <input type="text" name="cnum" id="cnum" placeholder="13006403" required maxlength="8">
+                    <input type="text" name="cname" id="cname" placeholder="Business Admininstration">
+                    <br>
+                    <input type="text" name="cnum" id="cnum" placeholder="13016207" required maxlength="8">
+                    <input type="text" name="cname" id="cname"
+                        placeholder="Computer Organizeation and Assembly Language">
+                    <br>
+                    <input type="text" name="cnum" id="cnum" placeholder="13016208" required maxlength="8">
+                    <input type="text" name="cname" id="cname"
+                        placeholder="Computer Organizeation and Assembly Language Laboratory">
+                    <br>
+                    <input type="text" name="cnum" id="cnum" placeholder="13016212" required maxlength="8">
+                    <input type="text" name="cname" id="cname" placeholder="Data Structure and Algorithms">
+                    <br>
+                    <input type="text" name="cnum" id="cnum" placeholder="13016213" required maxlength="8">
+                    <input type="text" name="cname" id="cname" placeholder="Data Structure and Algorithms Laboratory">
+                    <br>
+                    <input type="text" name="cnum" id="cnum" placeholder="13016249" required maxlength="8">
+                    <input type="text" name="cname" id="cname" placeholder="Advanced Object-Oriented Programming">
+                    <br>
+                    <strong><i>GPS :</i></strong>
+                    <input type="text" name="gpa" id="gpa" pattern="[0-4\.\d]" required maxlength="4"
+                        placeholder="X.XX">
+                    <strong><i>GPA :</i></strong>
+                    <input type="text" name="gpa" id="gpa" pattern="[0-4\.\d]" required maxlength="4"
+                        placeholder="X.XX">
+                    <br>
+                    ‎
+                    <br>
+                    ‎
+                    <strong>Total number of credits earned</strong>
+                    <input type="text" name="total" id="total" placeholder="XX">
+                </td>
+                <!-- Credit -->
+                <td width="50" align="center">
+                    <br>
+                    <input type="text" name="credit" id="credit" placeholder="3">
+                    <br>
+                    <input type="text" name="credit" id="credit" placeholder="3">
+                    <br>
+                    <br>
+                    <br>
+                    <input type="text" name="credit" id="credit" placeholder="3">
+                    <br>
+                    <input type="text" name="credit" id="credit" placeholder="4">
+                    <br>
+                    <input type="text" name="credit" id="credit" placeholder="3">
+                    <br>
+                    <input type="text" name="credit" id="credit" placeholder="3">
+                    <br>
+                    <input type="text" name="credit" id="credit" placeholder="3">
+                    <br>
+                    <input type="text" name="credit" id="credit" placeholder="1">
+                    <br>
+                    <br>
+                    <br>
+                    <input type="text" name="credit" id="credit" placeholder="3">
+                    <br>
+                    <input type="text" name="credit" id="credit" placeholder="4">
+                    <br>
+                    <input type="text" name="credit" id="credit" placeholder="3">
+                    <br>
+                    <input type="text" name="credit" id="credit" placeholder="3">
+                    <br>
+                    <input type="text" name="credit" id="credit" placeholder="3">
+                    <br>
+                    <input type="text" name="credit" id="credit" placeholder="1">
+                    <br>
+                    <input type="text" name="credit" id="credit" placeholder="1">
+                    <br>
+                    <br>
+                    <br>
+                    <input type="text" name="credit" id="credit" placeholder="3">
+                    <br>
+                    <input type="text" name="credit" id="credit" placeholder="4">
+                    <br>
+                    <input type="text" name="credit" id="credit" placeholder="3">
+                    <br>
+                    <input type="text" name="credit" id="credit" placeholder="3">
+                    <br>
+                    <input type="text" name="credit" id="credit" placeholder="3">
+                    <br>
+                    <input type="text" name="credit" id="credit" placeholder="1">
+                    <br>
+                    <input type="text" name="credit" id="credit" placeholder="1">
+                    <br>
+                    <input type="text" name="credit" id="credit" placeholder="1">
+                    <br>
+                    ‎
+                    <br>
+                    ‎
+                    <br>
+                    ‎
+                </td>
+                <!-- Grade -->
+                <td width="50" align="center">
+                    <br>
+                    <input type="text" name="grade" id="grade" placeholder="X">
+                    <br>
+                    <input type="text" name="grade" id="grade" placeholder="X">
+                    <br>
+                    <br>
+                    <br>
+                    <input type="text" name="grade" id="grade" placeholder="X">
+                    <br>
+                    <input type="text" name="grade" id="grade" placeholder="X">
+                    <br>
+                    <input type="text" name="grade" id="grade" placeholder="X">
+                    <br>
+                    <input type="text" name="grade" id="grade" placeholder="X">
+                    <br>
+                    <input type="text" name="grade" id="grade" placeholder="X">
+                    <br>
+                    <input type="text" name="grade" id="grade" placeholder="X">
+                    <br>
+                    <br>
+                    <br>
+                    <input type="text" name="grade" id="grade" placeholder="X">
+                    <br>
+                    <input type="text" name="grade" id="grade" placeholder="X">
+                    <br>
+                    <input type="text" name="grade" id="grade" placeholder="X">
+                    <br>
+                    <input type="text" name="grade" id="grade" placeholder="X">
+                    <br>
+                    <input type="text" name="grade" id="grade" placeholder="X">
+                    <br>
+                    <input type="text" name="grade" id="grade" placeholder="X">
+                    <br>
+                    <input type="text" name="grade" id="grade" placeholder="X">
+                    <br>
+                    <br>
+                    <br>
+                    <input type="text" name="grade" id="grade" placeholder="X">
+                    <br>
+                    <input type="text" name="grade" id="grade" placeholder="X">
+                    <br>
+                    <input type="text" name="grade" id="grade" placeholder="X">
+                    <br>
+                    <input type="text" name="grade" id="grade" placeholder="X">
+                    <br>
+                    <input type="text" name="grade" id="grade" placeholder="X">
+                    <br>
+                    <input type="text" name="grade" id="grade" placeholder="X">
+                    <br>
+                    <input type="text" name="grade" id="grade" placeholder="X">
+                    <br>
+                    <input type="text" name="grade" id="grade" placeholder="X">
+                    <br>
+                    ‎
+                    <br>
+                    ‎
+                    <br>
+                    ‎
+                </td>
+                <!-- Right box -->
+                <td width="400" colspan="5" align="center"></td>
+                <td width="50" align="center"></td>
+                <td width="50" align="center"></td>
+            </tr>
+        </table>
+    </form>
+</body>
+
+</html>

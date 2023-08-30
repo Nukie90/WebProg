@@ -1,0 +1,184 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+p {
+    padding: 10px ;
+    font-weight: bold;
+}
+
+.main {
+    max-width: 1000px;
+    height: auto;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+}
+.left {
+    flex: 1;
+    max-width: 35%;
+    max-width: 250px;
+    margin-right: 5px;
+    text-align: center;
+}
+
+.img {
+    padding-bottom: 50px;
+
+}
+
+.img img {
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    padding: 10px;
+}
+
+.address {
+    padding-bottom: 80px;
+}
+
+.contact {
+    padding-bottom: 80px;
+}
+
+.right {
+    flex: 2;
+}
+
+.right input {
+    width: 400px;
+}
+
+.info {
+    padding-bottom: 80px;
+}
+
+.edu {
+    padding-bottom: 80px;
+}
+
+.button {
+    margin: 25px;
+    font-size: 16px;
+    padding: 5px 80px;
+}
+
+.button:hover {
+    cursor: pointer;
+    background-color: lightblue;
+}
+
+.khaki {
+    background-color: khaki !important;
+}
+
+.pink {
+    background-color: pink;
+}
+
+.lime {
+    background-color: limegreen;
+}
+
+@media screen and (max-width: 600px) {
+    p {
+        font-size: 14px;
+    }
+}
+
+@media screen and (min-width: 600px) and (max-width: 900px) {
+    p {
+        font-size: 20px;
+    }
+}
+
+@media screen and (min-height: 800px) {
+    .img img {
+        width: 300px;
+        height: 300px;
+    }
+}
+
+@media screen and (min-width: 900px) {
+    p {
+        font-size: 24px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .main {
+        max-width: 500px;
+        width: 100%;
+        height: auto;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .left {
+        flex: 1;
+        text-align: left;
+        max-width: 100%;
+        width: 450px;
+    }
+    
+    .img {
+        padding-bottom: 50px;
+        text-align: center;
+        
+    }
+    .img img {
+        border-radius: 50%;
+        width: 200px;
+        height: 200px;
+        padding: 10px;
+    }
+    
+    .address {
+        padding-bottom: 80px;
+    }
+    
+    .contact {
+        padding-bottom: 80px;
+    }
+    
+    .right {
+        flex: 1;
+        width: 450px;
+    }
+    
+    .right input {
+        width: 200px;
+    }
+    
+    .info {
+        padding-bottom: 80px;
+    }
+    
+    .edu {
+        padding-bottom: 80px;
+    }
+
+    .subbox {
+        display: flex;
+        justify-content: center;
+    }
+    
+    .button {
+        margin: 25px;
+        font-size: 16px;
+        padding: 5px 80px;
+    }
+
+    input {
+        width: 200px;
+    }
+
+    textarea {
+        width: 200px;
+    }
+}

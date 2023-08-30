@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping list</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Shopping list</h1>
+    <div class="main" id="main">
+        <div class="head" id="head">
+            <div class="item">Item Name</div>
+            <div class="amount">Amount</div>
+            <div class="price">Price</div>
+        </div>
+    </div>
+    
+    <button onclick="reset()">Reset List</button>
+    <h3>Add Item</h3>
+    <div class="inputbox">
+        <label for="name">Name:</label>
+        <input type="text" id="iteminput" name="name"><br/>
+        <label for="amount">Amount:</label>
+        <input type="text" id="amountinput" name="amount"><br/>
+        <label for="price">Price:</label>
+        <input type="text" id="priceinput" name="price"><br/>
+        <button onclick="add()">Add</button>
+        <button onclick="clearInput()">Clear</button>
+    </div>
+    <script>
+        function add(){
+            var item = document.getElementById("iteminput").value;
+            var amount = document.getElementById("amountinput").value;
+            var price = document.getElementById("priceinput").value;
+            console.log(price);
+            var list = document.getElementById("main");
+            var div = document.createElement("div");
+            div.className = "list";
+            var itemdiv = document.createElement("div");
+            itemdiv.className = "item";
+            itemdiv.innerHTML = item;
+            var amountdiv = document.createElement("div");
+            amountdiv.className = "amount";
+            amountdiv.innerHTML = amount;
+            var pricediv = document.createElement("div");
+            pricediv.className = "price";
+            pricediv.innerHTML = price;
+            div.appendChild(amountdiv);
+            div.appendChild(itemdiv);
+            div.appendChild(pricediv);
+            list.appendChild(div);
+        }
+        function reset() {
+            var list = document.getElementById("main");
+            list.innerHTML = "";
+            var div = document.createElement("div");
+            div.className = "head";
+            div.id = "head";
+            var itemdiv = document.createElement("div");
+            itemdiv.className = "item";
+            itemdiv.innerHTML = "Item Name";
+            var amountdiv = document.createElement("div");
+            amountdiv.className = "amount";
+            amountdiv.innerHTML = "Amount";
+            var pricediv = document.createElement("div");
+            pricediv.className = "price";
+            pricediv.innerHTML = "Price";
+            div.appendChild(itemdiv);
+            div.appendChild(amountdiv);
+            div.appendChild(pricediv);
+            list.appendChild(div);
+        }
+
+        function clearInput(){
+            document.getElementById("iteminput").value = "";
+            document.getElementById("amountinput").value = "";
+            document.getElementById("priceinput").value = "";
+        }
+    </script>
+</body>
+</html>

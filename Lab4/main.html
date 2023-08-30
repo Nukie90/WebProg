@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Resume (DIV)</title>
+    <script src="http://161.246.5.61/Lab.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="longBox blue">
+        <img src="https://b.fssta.com/uploads/application/soccer/headshots/53004.vresize.350.350.medium.20.png"
+            alt="Profile Picture" width="200" height="200">
+        <hr style="margin: 0;">
+        <p><strong>Profile:</strong></p>
+        <p style="padding-bottom: 2%;"><textarea id="profile" name="profile" rows="2"></textarea></p>
+        <p><label for="street"><strong>Address:</strong></label></p>
+        <hr style="margin: 0;">
+        <p><input type="text" id="street" name="street" placeholder="Maple Street"></p>
+        <p><input type="text" id="city" name="city" placeholder="California"></p>
+        <p style="padding-bottom: 30%;">
+            <label for="country">Country:</label>
+            <select name="country" id="country" required style="width: 100%;">
+                <option value="">Select a country</option>
+                <script>
+                    populateCountries("country");
+                </script>
+            </select>
+        </p>
+        <p><label for="ref"><strong>Contacts:</strong></label></p>
+        <hr style="margin: 0;">
+        <p><label for="ref">Reference:</label></p>
+        <p><textarea name="ref" id="ref" rows="3"></textarea></p>
+        <p><label for="favColour"><strong>Favorite Colour:</strong></p>
+        <p><input type="color" id="favColour"></p>
+    </div>
+    <div class="shortBox pink">
+        <p><strong>Personal Information:</strong></p>
+        <hr style="margin: 0;">
+        <p><label for="name"><strong>Name:</strong></p>
+        <p><input type="text" id="name" name="name" placeholder="John Doe"></p>
+        <p><label for="age"><strong>Age:</strong></label></p>
+        <p><input type="range" id="age" name="age" min="0" max="100" onchange="updateAgeValue()">
+            <span id="ageValue">0</span>
+            <script>
+                updateAgeValue();
+            </script>
+        </p>
+        <p><label for="email"><strong>Email:</strong></label></p>
+        <p><input type="email" id="email" name="email" placeholder="myEmail@gmail.com"></p>
+        <p><label for="phone"><strong>Phone:</strong></label></p>
+        <p><input type="tel" id="phone" name="phone" placeholder="092-345-6789"></p>
+    </div>
+    <div class="shortBox lightblue">
+        <p><label for="university"><strong>Education:</strong></label></p>
+        <hr style="margin: 0;">
+        <p><label for="university">University:</label></p>
+        <p><input type="text" id="university" name="university" placeholder="KMITL"></p>
+        <p><label for="degree"><strong>Degree:</strong></label></p>
+        <p><input type="text" id="degree" name="degree" placeholder="Software Engineering"></p>
+        <p><label for="graduationYear"><strong>Year of Graduation:</strong></label></p>
+        <p><input type="date" id="graduationYear"></p>
+    </div>
+    <div class="shortBox grey">
+        <p><label for="skills"><strong>Skills & Experience</strong></label>
+            <hr style="margin: 0;">
+        </p>
+        <p><label for="skills">Skills:</label></p>
+        <p><textarea name="skills" id="skills" rows="3"></textarea></p>
+        <p><label for="experience"><strong>Experience:</strong></label></p>
+        <p><textarea name="experience" id="experience" rows="3"></textarea></p>
+    </div>
+    <div align="center" class="button">
+        <input type="submit" value="Submit" onclick="displayResume()">
+    </div>
+</body>
+
+</html>

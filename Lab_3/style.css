@@ -1,0 +1,178 @@
+/* Body styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f7f7f7;
+    color: #333;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+/* Table styles */
+table {
+    border-collapse: collapse;
+    width: 100%;
+    max-width: 992px;
+    margin: 0 auto;
+    background-color: #fff;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+tr:hover {
+    background-color: #f2f2f2;
+}
+
+td {
+    padding: 10px;
+}
+
+/* Header styles */
+h1 {
+    text-align: center;
+    color: #4CAF50;
+    margin-top: 20px;
+}
+
+/* Profile picture styles */
+img {
+    display: block;
+    margin: 0 auto;
+    border-radius: 50%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: #87CEFA;
+    padding: 5px;
+    transition: transform 0.3s ease;
+}
+
+img:hover {
+    transform: scale(1.1);
+}
+
+/* Personal Information section styles */
+strong {
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+select,
+textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+    background-color: #f9f9f9;
+    color: #444;
+    transition: border-color 0.3s ease;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: #4CAF50;
+    transform: scale(1.05);
+}
+
+/* Submit button styles */
+input[type="submit"] {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+/* Additional styles */
+hr {
+    border: none;
+    border-top: 1px solid #ddd;
+    margin: 10px 0;
+}
+
+/* Colorful styles */
+input[type="color"] {
+    height: 30px;
+    padding: 0;
+    border: none;
+    outline: none;
+    background-image: linear-gradient(to right, #4CAF50, #ff9800, #e91e63);
+}
+
+/* Dark blue column styles */
+.dark-blue-column {
+    background-color: #359EBF;
+    color: #fff;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.dark-blue-column:hover {
+    background-color: #21759B;
+}
+
+/* Responsive adjustments */
+/* Rest of your CSS... */
+
+/* Make the table responsive for smaller screens */
+@media screen and (max-width: 600px) {
+    table {
+        width: 100%;
+        max-width: none; /* Remove the maximum width constraint for mobile */
+    }
+
+    colgroup {
+        display: table-row-group;
+    }
+
+    tr {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    td {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    td.dark-blue-column {
+        background-color: #359EBF;
+        color: #fff;
+        padding: 10px;
+    }
+
+    img {
+        margin: 60px auto;
+        box-shadow: none;
+        width: 80%; /* Adjust the width of the image for small screens */
+        max-width: 200px; /* Limit the maximum width of the image */
+	scale: 1.5;
+    }
+
+    input,
+    select,
+    textarea {
+        width: 80%;
+        margin: 5px auto;
+    }
+
+    input[type="submit"],
+    h1,
+    strong {
+        font-size: 20px;
+    }
+
+    input[type="submit"] {
+        padding: 8px 16px;
+    }
+}
+
