@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping list</title>
+    <style>
+        .table {
+            border: 1px solid black;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+
+        .head {
+            background-color: salmon;
+        }
+        td{
+            padding: 0 10px;
+        }
+
+        #item {
+            border: 1px solid black;
+            width: 50%;
+        }
+
+        #amount {
+            border: 1px solid black;
+            width: 25%;
+        }
+
+        #price {
+            border: 1px solid black;
+            width: 25%;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Shopping list</h1>
+    <table id="table" class="table">
+        <tr class="head">
+            <td id="item">Item Name</td>
+            <td id="amount">Amount</td>
+            <td id="price">Price</td>
+        </tr>
+    </table>
+    <button type="submit" onclick="Reset()">Reset List</button>
+    <h3>Add Item</h3>
+    <label for="name">Name:</label>
+    <input type="text" id="iteminput" name="name"><br />
+    <label for="amount">Amount:</label>
+    <input type="text" id="amountinput" name="amount"><br />
+    <label for="price">Price:</label>
+    <input type="text" id="priceinput" name="price"><br />
+    <button onclick="add()">Add</button>
+    <button onclick="clearInput()">Clear</button>
+    <button onclick="deleteSelect()">Del</button>
+    <script>
+        function Reset(){
+            var table = document.getElementById("table");
+            table.innerHTML = "";
+            table.className = "table";
+            var tr = document.createElement("tr");
+            tr.className = "head";
+            var item = document.createElement("td");
+            item.id= "item";
+            item.innerHTML = "Item Name";
+            var amount = document.createElement("td");
+            amount.id = "amount";
+            amount.innerHTML = "Amount";
+            var price = document.createElement("td");
+            price.id = "price";
+            price.innerHTML = "Price";
+            tr.appendChild(item);
+            tr.appendChild(amount);
+            tr.appendChild(price);
+            table.appendChild(tr);
+        }
+        function add(){
+            var table = document.getElementById("table");
+            var tbody = document.createElement("tbody");
+            var item = document.getElementById("iteminput").value;
+            var amount = document.getElementById("amountinput").value;
+            var price = document.getElementById("priceinput").value;
+            var row = document.createElement("tr");
+            var itemcell = document.createElement("td");
+            itemcell.id = "item"
+            itemcell.innerHTML = item;
+            var amountcell = document.createElement("td");
+            amountcell.id = "amount";
+            amountcell.innerHTML = amount;
+            var pricecell = document.createElement("td");
+            pricecell.id = "price";
+            pricecell.innerHTML = price;
+            row.appendChild(itemcell);
+            row.appendChild(amountcell);
+            row.appendChild(pricecell);
+            tbody.appendChild(row);
+            table.appendChild(tbody);
+        }
+        function clearInput(){
+            document.getElementById("iteminput").value = "";
+            document.getElementById("amountinput").value = "";
+            document.getElementById("priceinput").value = "";
+        }
+        function deleteSelect(){
+            var table = document.getElementById("table");
+            var tbody = table.getElementsByTagName("tbody");
+            var row = tbody[0].getElementsByTagName("tr");
+            for (var i = 0; i < row.length; i++) {
+                if (row[i].style.backgroundColor == "yellow") {
+                    tbody[0].removeChild(row[i]);
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>

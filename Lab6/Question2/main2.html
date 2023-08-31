@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI calculator</title>
+    <style>
+        body {
+            text-align: center;
+        }
+        .head{
+            background-color: aqua;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>BMI calculator</h1>
+    <label for="height">Height: </label>
+    <input type="text" id="height" name="height" placeholder="cm"><br>
+    <label for="weight">Weight: </label>
+    <input type="text" id="weight" name="weight" placeholder="kg"><br>
+    <button onclick="calculate()">Calculate</button>
+
+    <h2>BMI result</h2>
+
+    <p id="result">No result</p>
+
+    <h2>BMI Reference</h2>
+
+    <table border="1px solid black" style="border-collapse: collapse; margin: 0 auto;">
+        <tr class="head">
+            <td>BMI</td>
+            <td>Classification</td>
+        </tr>
+        <tr>
+            <td>Less than 18.5</td>
+            <td>Underweight</td>
+        </tr>
+        <tr>
+            <td>18.5 - 24.9</td>
+            <td>Normal Weight</td>
+        </tr>
+        <tr>
+            <td>25.0 - 29.9</td>
+            <td>Overweight</td>
+        </tr>
+        <tr>
+            <td>30.0 or more</td>
+            <td>Obese</td>
+        </tr>
+    </table>
+    <script>
+        function calculate() {
+            var height = document.getElementById("height").value;
+            var weight = document.getElementById("weight").value;
+            var total = weight / (height * height / 10000);
+            var print = document.getElementById("result");
+            var h2 = document.createElement("h2");
+            if (total < 18.5) {
+                print.innerHTML = `With your weight of ${weight} kg and height of ${height} cm, Your bmi is ${total}.`
+                h2.innerHTML = "You are underweight."
+                print.appendChild(h2)
+            } else if (total < 25) {
+                print.innerHTML = `With your weight of ${weight} kg and height of ${height} cm, Your bmi is ${total}.`
+                h2.innerHTML = "You are normal."
+                print.appendChild(h2)
+            } else if (total < 30) {
+                print.innerHTML = `With your weight of ${weight} kg and height of ${height} cm, Your bmi is ${total}.`
+                h2.innerHTML = "You are overweight."
+                print.appendChild(h2)
+            } else {
+                print.innerHTML = `With your weight of ${weight} kg and height of ${height} cm, Your bmi is ${total}.`
+                h2.innerHTML = "You are obese."
+                print.appendChild(h2)
+            }
+        }
+    </script>
+</body>
+
+</html>
