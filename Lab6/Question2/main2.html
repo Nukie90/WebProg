@@ -59,7 +59,7 @@
             var print = document.getElementById("result");
             var h2 = document.createElement("h2");
             if (total < 18.5) {
-                print.innerHTML = `With your weight of ${weight} kg and height of ${height} cm, Your bmi is ${total}.`
+                print.innerHTML = `With your weight of ${weight} kg and height of ${height} cm, Your bmi is ${total.toFixed(2)}.`
                 h2.innerHTML = "You are underweight."
                 print.appendChild(h2)
             } else if (total < 25) {

@@ -7,7 +7,6 @@
     <title>Shopping list</title>
     <style>
         .table {
-            border: 1px solid black;
             border-collapse: collapse;
             margin-bottom: 20px;
         }
@@ -38,7 +37,7 @@
 
 <body>
     <h1>Shopping list</h1>
-    <table id="table" class="table">
+    <table id="table" class="table" border="1">
         <tr class="head">
             <td id="item">Item Name</td>
             <td id="amount">Amount</td>
@@ -61,6 +60,7 @@
             var table = document.getElementById("table");
             table.innerHTML = "";
             table.className = "table";
+            table.border = '1';
             var tr = document.createElement("tr");
             tr.className = "head";
             var item = document.createElement("td");

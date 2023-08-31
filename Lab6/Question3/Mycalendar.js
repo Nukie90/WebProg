@@ -5,7 +5,7 @@ function calendar() {
     table.setAttribute('border', '1');
     table.style.textAlign = 'center'
     table.style.borderCollapse = `collapse`;
-    var day = ["Mon", "Tue", "Wed", "Thr", "Fri", "Sat", "Sun"];
+    var day = ["Sun", "Mon", "Tue", "Wed", "Thr", "Fri", "Sat"];
     var tbdy = document.createElement('tbody');
     var noday = 1;
     for (var i = 0; i < 7; i++) {
