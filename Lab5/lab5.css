@@ -59,6 +59,10 @@ p {
 .edu {
     padding-bottom: 80px;
 }
+.subbox{
+    display: flex;
+    justify-content: center;
+}
 
 .button {
     margin: 25px;
