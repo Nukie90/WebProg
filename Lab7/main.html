@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Timer</title>
+    <style>
+        * {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Online Timer</h1>
+    <h3 id="txt"></h3>
+
+    <table id="info" border="1" style="border-collapse: collapse; margin: 0 auto;">
+        <tr>
+            <td>Time</td>
+            <td>Alert Word</td>
+        </tr>
+    </table>
+    <button onclick="pause()">pause</button>
+
+    <script>
+        let timerInterval = setInterval(updateTimer, 1)
+        let seconds = 0;
+        let minutes = 55;
+        let hours = 8;
+
+        function AlertTime(time, message) {
+            this.time = time || "";
+            this.message = message || "";
+            this.alerted = false;
+        }
+
+        const timer = [
+            new AlertTime(`09:00`, `Wake up`),
+            new AlertTime('11:05', 'Lunch Time'),
+            new AlertTime('15:30', 'Take a break')
+        ];
+
+        const time = document.getElementById('time');
+        const message = document.getElementById('message');
+
+        for (let i = 0; i < timer.length; i++) {
+            const tr = document.createElement('tr');
+            const td1 = document.createElement('td');
+            const td2 = document.createElement('td');
+            td1.innerHTML = timer[i].time;
+            td2.innerHTML = timer[i].message;
+            tr.appendChild(td1);
+            tr.appendChild(td2);
+            document.getElementById('info').appendChild(tr);
+        }
+
+        function updateTimer() {
+            seconds++;
+            if (seconds === 60) {
+                seconds = 0;
+                minutes++;
+                if (minutes === 60) {
+                    minutes = 0;
+                    hours++;
+                }
+            }
+            const formattedTime = `${checkTime(hours)}:${checkTime(minutes)}`;
+            console.log(formattedTime)
+            document.getElementById('txt').innerHTML = 'Current Time (1000x faster): ' + formattedTime;
+            checkAlertTime(formattedTime);
+        }
+
+        function checkAlertTime(currentTime) {
+            timer.forEach(e => {
+                if (currentTime === e.time && !e.alerted) {
+                    alert(e.message);
+                    e.alerted = true; // Mark this checkpoint as alerted
+                }
+            });
+        }
+
+        function checkTime(i) {
+            if (i < 10) { i = "0" + i };  // add zero in front of numbers < 10
+            return i;
+        }
+
+        function pause() {
+            clearInterval(timerInterval);
+        }
+    </script>
+</body>
+
+</html>
