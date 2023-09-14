@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Timer</title>
+    <style>
+        * {
+            text-align: center;
+        }
+        div{
+            display: flex;
+            flex-direction: column;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Time Schedule</h1>
+    <h3 id="txt"></h3>
+    Select Date: <input type="date" name="date" id="date" onchange="selectDate()">
+    <div id="main">
+        <table id="info" border="1" style="border-collapse: collapse; margin: 0 auto;">
+            <tr>
+                <td>Time</td>
+                <td>Alert Word</td>
+            </tr>
+        </table>
+    </div>
+    <button onclick="edit()" id="kuypun">Edit Schedule</button><br>
+    <button onclick="export_()" id="export">Export Schedule</button><br>
+    Import Schedule<button onclick="import_()" id="import">Choose File</button><br>
+    <button onclick="save()" id="save">Save Schedule</button>
+    <script src="function.js"></script>
+</body>
+
+</html>
