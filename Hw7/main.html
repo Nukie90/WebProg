@@ -1,42 +1,50 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>Unofficial Transcript</title>
     <style>
-        body, html {
+        body,
+        html {
             height: 100%;
             text-align: center;
             justify-content: center;
             margin: auto;
             max-width: 900px;
         }
+
         table {
             text-align: center;
             justify-content: center;
         }
+
         th {
             border: 1px solid black;
             padding: 8px;
         }
-        
+
         img {
-            width: 100%; 
-            height: auto; 
+            width: 100%;
+            height: auto;
             display: block;
-            margin: 0 auto; 
+            margin: 0 auto;
         }
-        .center_top_col{
-            width: 50%; 
+
+        .center_top_col {
+            width: 50%;
             text-align: center;
         }
+
         .left_top_col {
-            width: 35%; 
+            width: 35%;
             text-align: left;
         }
+
         .mid_top_col {
-            width: 15%; 
+            width: 15%;
             text-align: left;
         }
+
         .right_top_col {
             text-align: left;
         }
@@ -45,24 +53,28 @@
             border-collapse: collapse;
             width: 100%;
         }
+
         .content_table td {
             border: 1px solid black;
             padding: 8px;
             border-bottom: none;
             border-top: none;
         }
+
         .content_table tbody {
             border-bottom: 1px solid black;
         }
     </style>
 </head>
+
 <body>
     <br><br>
     <h1>( Unofficial Transcript )</h1>
     <table>
         <tbody>
             <tr>
-                <td></td><td></td>
+                <td></td>
+                <td></td>
                 <td rowspan="3" class="right_top_pic">
                     <img src="man.png" alt="transcript pic">
                 </td>
@@ -148,5 +160,7 @@
     <br>
     <label for="fileInput">Import Transcript:</label>
     <input type="file" id="fileInput" accept=".json">
+    <script src="funciton.js"></script>
 </body>
+
 </html>
