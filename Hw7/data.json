@@ -28,6 +28,20 @@
                     "subject_id": "01006717",
                     "credit": "3",
                     "grade": "C"
+                },
+                {
+                    "name": "Computer Programming",
+                    "subject_id": "01012345",
+                    "credit": "4",
+                    "grade": "A"
+                }
+            ],
+            "Summer": [
+                {
+                    "name": "General Education",
+                    "subject_id": "01012345",
+                    "credit": "3",
+                    "grade": "B+"
                 }
             ]
         }

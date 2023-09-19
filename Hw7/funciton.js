@@ -1,4 +1,5 @@
 let transcript = [];
+console.log(transcript)
 
 window.addEventListener('load', function () {
     var upload = document.getElementById('fileInput');
@@ -32,7 +33,7 @@ window.addEventListener('load', function () {
                         var courses = transcript.credit['Year, 2022-2023'][semester];
                         var semesterRow = document.createElement('tr');
                         var semesterCell = document.createElement('td');
-                        semesterCell.textContent = `${semester}, Year, 2022-2023`;
+                        semesterCell.textContent = `${semester}, ${Object.keys(transcript.credit)}`;
                         var creditCell = document.createElement('td');
                         var gradeCell = document.createElement('td');
                         semesterRow.appendChild(semesterCell);
