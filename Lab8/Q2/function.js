@@ -47,7 +47,7 @@ function selectDate(){
 
 function done() {
     console.log(timer)
-    button = document.getElementById('kuypun');
+    button = document.getElementById('edit');
     button.innerHTML = 'Edit';
     button.setAttribute('onclick', 'edit()');
     let table = document.getElementById('info');
@@ -98,7 +98,7 @@ function done() {
 }
 
 function edit() {
-    button = document.getElementById('kuypun');
+    button = document.getElementById('edit');
     button.innerHTML = 'Done';
     button.setAttribute('onclick', 'done()');
     let table = document.getElementById('info');
@@ -139,7 +139,7 @@ function edit() {
     let addrow = document.createElement('button');
     addrow.innerHTML = 'Add Row';
     addrow.setAttribute('onclick', 'addrow()');
-    addrow.id = 'naheepun';
+    addrow.id = 'addrow';
     document.getElementById('main').appendChild(addrow);
 }
 

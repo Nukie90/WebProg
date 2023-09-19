@@ -27,7 +27,7 @@ function start() {
             footer.push(footerData);
 
             var totalValue = {
-                "Value": 3000
+                "value": 3000
             }
             footer.push(totalValue);
         } else {
