@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        table {
+            border-collapse: collapse;
+        }
+
+        td {
+            border: 1px solid black;
+            width: 50px;
+            height: 50px;
+            text-align: center;
+            vertical-align: middle;
+            cursor: pointer;
+        }
+
+        #screen {
+            width: 200px;
+            height: 50px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <tr>
+            <td colspan="3" id="screen">Please dial a tel. no.</td>
+        </tr>
+        <tr>
+            <td id="1">1</td>
+            <td id="2">2</td>
+            <td id="3">3</td>
+        </tr>
+        <tr>
+            <td id="4">4</td>
+            <td id="5">5</td>
+            <td id="6">6</td>
+        </tr>
+        <tr>
+            <td id="7">7</td>
+            <td id="8">8</td>
+            <td id="9">9</td>
+        </tr>
+        <tr>
+            <td id="del">&ltDel</td>
+            <td id="0">0</td>
+            <td id="call">Call</td>
+        </tr>
+    </table>
+    <script>
+        const screen = document.getElementById("screen");
+        let currentInput = "";
+
+        function updateScreen() {
+            screen.innerHTML = currentInput;
+        }
+
+        document.addEventListener("click", function (event){
+            if (event.target.id === "del") {
+                currentInput = currentInput.slice(0, -1);
+                updateScreen();
+            } else if (event.target.id === "call") {
+                if (currentInput.length === 10) {
+                    screen.innerHTML = currentInput + " Calling...";
+                    currentInput = "Please dial a tel. no."; // reset
+                } else {
+                    if (currentInput === "Please dial a tel. no."){
+                        updateScreen();
+                    }else{
+                        screen.innerHTML = currentInput + " Err!";
+                    }
+                }
+            } else {
+                if (currentInput === "Please dial a tel. no."){
+                    currentInput = "";
+                }
+                currentInput += event.target.id;
+                updateScreen();
+            }
+        });
+
+        document.addEventListener("keydown", function (event){
+            if (event.key === "Backspace") {
+                currentInput = currentInput.slice(0, -1);
+                updateScreen();
+            } else if (event.key === "Enter") {
+                if (currentInput.length === 10) {
+                    screen.innerHTML = currentInput + " Calling...";
+                    currentInput = "Please dial a tel. no.";
+                } else {
+                    if (currentInput === "Please dial a tel. no."){
+                        updateScreen();
+                    }else{
+                        screen.innerHTML = currentInput + " Err!";
+                    }
+                }
+            } else if (/[0-9]/.test(event.key)){
+                if (currentInput === "Please dial a tel. no."){
+                    currentInput = "";
+                } 
+                currentInput += event.key;
+                updateScreen();
+            }
+        });
+    </script>
